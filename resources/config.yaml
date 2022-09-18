@@ -1,0 +1,10 @@
+telebot:
+  api_key: 5441561775:AAGsfEWL6fv4MIjE7Q9RM1VA6RLbYo9cN2Y
+bmkg:
+  options:
+    address: https://data.bmkg.go.id/DataMKG/TEWS
+    timeout: 5s
+    debug_mode: true
+  path:
+    earthquake-info: /autogempa.json
+    earthquake-info-list : /gempadirasakan.json
