@@ -34,11 +34,9 @@ func (h *telebotHandler) TelebotHandler() {
 	h.bot.AddHandler("info-gempa", h.telebotService.EarthquakeInfo(), "private")
 	h.bot.AddHandler("daftar-info-gempa", h.telebotService.EarthquakeInfoList(), "private")
 
-	for {
-		update := <-updateChannel
-		h.validateCommand(update)
-		fmt.Println(update)
-	}
+	update := <-updateChannel
+	h.validateCommand(update)
+	fmt.Println(update)
 }
 
 func (h *telebotHandler) validateCommand(u *objects.Update) {
